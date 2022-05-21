@@ -45,10 +45,23 @@ const config = {
         rules: [
             {
                 test: /\.ejs$/,
-                loader: 'ejs-loader',
-                options: {
-                    esModule: false,
-                },
+                use: [
+                    {
+                        loader: 'ejs-loader',
+                        options: {
+                            esModule: false,
+                        },
+                    },
+                    {
+                        loader: 'string-replace-loader',
+                        options: {
+                            search: /href=".*ejs/g,
+                            replace(match) {
+                                return `${match.slice(0, -3)}html`;
+                            },
+                        },
+                    },
+                ],
             },
             {
                 test: /\.(scss|css)$/,
