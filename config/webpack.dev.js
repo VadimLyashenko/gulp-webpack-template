@@ -49,6 +49,14 @@ const config = {
         publicPath: '/',
     },
     devServer: {
+        // server: {
+        //     type: 'https',
+        //     options: {
+        //         key: './config/ssl/192.168.0.126-key.pem',
+        //         cert: './config/ssl/192.168.0.126.pem',
+        //     },
+        // },
+
         historyApiFallback: {
             index: '/404.html',
         },
