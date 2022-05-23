@@ -1,4 +1,5 @@
 import * as path from 'path';
+// import fs from 'fs';
 import {readdir} from 'fs/promises';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
@@ -24,6 +25,7 @@ class HtmlBeautify {
 const paths = {
     src: path.resolve('src'),
     build: path.resolve('dist'),
+    data: path.resolve('src/data/'),
 };
 
 const srcFiles = await readdir(paths.src);
@@ -37,6 +39,13 @@ const ejsPages = srcFiles
 const multipleHtmlPlugins = ejsPages.map(name => new HtmlWebpackPlugin({
     template: `./src/${name}.ejs`,
     filename: `${name}.html`,
+    // templateParameters: fs.readdirSync(paths.data)
+    //     .reduce((o, key) => ({
+    //         ...o,
+    //         [key.split('.')
+    //             .slice(0, -1)
+    //             .join('.')]: JSON.parse(fs.readFileSync(path.join(paths.data, key))),
+    //     }), {}),
 }));
 
 const config = {
