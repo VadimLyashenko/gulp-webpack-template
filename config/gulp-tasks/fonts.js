@@ -60,35 +60,81 @@ function addFontsStyles(styles, fonts) {
         const fontFileName = fonts[i].split('.')[0];
 
         if (newFileOnly !== fontFileName) {
-            const fontName = fontFileName.split('-')[0] ? fontFileName.split('-')[0] : fontFileName;
-            let fontWeight = fontFileName.split('-')[1] ? fontFileName.split('-')[1] : fontFileName;
+            i !== 0 && fs.appendFileSync(styles, '\n');
 
-            if (fontWeight.toLowerCase() === 'thin') {
-                fontWeight = 100;
-            } else if (fontWeight.toLowerCase() === 'extralight') {
-                fontWeight = 200;
-            } else if (fontWeight.toLowerCase() === 'light') {
-                fontWeight = 300;
-            } else if (fontWeight.toLowerCase() === 'medium') {
-                fontWeight = 500;
-            } else if (fontWeight.toLowerCase() === 'semibold') {
-                fontWeight = 600;
-            } else if (fontWeight.toLowerCase() === 'bold') {
-                fontWeight = 700;
-            } else if (fontWeight.toLowerCase() === 'extrabold' || fontWeight.toLowerCase() === 'heavy') {
-                fontWeight = 800;
-            } else if (fontWeight.toLowerCase() === 'black') {
-                fontWeight = 900;
-            } else {
-                fontWeight = 400;
+            const fontName = fontFileName.split('-')[0] ? fontFileName.split('-')[0] : fontFileName;
+            const fontDesc = fontFileName.split('-')[1] ? fontFileName.split('-')[1].toLowerCase() : fontFileName;
+
+            let fontWeight = 400;
+            let fontStyle = 'normal';
+
+            switch (fontDesc) {
+                case 'thin': {
+                    fontWeight = 100;
+                    break;
+                }
+                case 'extralight': {
+                    fontWeight = 200;
+                    break;
+                }
+                case 'light': {
+                    fontWeight = 300;
+                    break;
+                }
+                case 'medium': {
+                    fontWeight = 500;
+                    break;
+                }
+                case 'semibold': {
+                    fontWeight = 600;
+                    break;
+                }
+                case 'bold': {
+                    fontWeight = 700;
+                    break;
+                }
+                // eslint-disable-next-line no-constant-binary-expression
+                case 'extrabold' || 'heavy': {
+                    fontWeight = 800;
+                    break;
+                }
+                case 'black': {
+                    fontWeight = 900;
+                    break;
+                }
+                case 'thinitalic': {
+                    fontWeight = 100;
+                    fontStyle = 'italic';
+                    break;
+                }
+                case 'lightitalic': {
+                    fontWeight = 300;
+                    fontStyle = 'italic';
+                    break;
+                }
+                case 'italic': {
+                    fontStyle = 'italic';
+                    break;
+                }
+                case 'bolditalic': {
+                    fontWeight = 700;
+                    fontStyle = 'italic';
+                    break;
+                }
+                case 'blackitalic': {
+                    fontWeight = 900;
+                    fontStyle = 'italic';
+                    break;
+                }
             }
 
             fs.appendFileSync(styles, `@font-face {
     font-family: ${fontName};
-    font-display: swap;
-    src: url("../fonts/${fontFileName}.woff2") format("woff2"), url("../fonts/${fontFileName}.woff") format("woff");
+    font-style: ${fontStyle};
     font-weight: ${fontWeight};
-    font-style: normal;\n}\r\n\n`);
+    font-display: swap;
+    src: url('../fonts/${fontFileName}.woff2') format('woff2'), url('../fonts/${fontFileName}.woff') format('woff');
+}\n`);
 
             newFileOnly = fontFileName;
         }

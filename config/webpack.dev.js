@@ -39,6 +39,7 @@ const ejsPages = srcFiles
 const multipleHtmlPlugins = ejsPages.map(name => new HtmlWebpackPlugin({
     template: `./src/${name}.ejs`,
     filename: `${name}.html`,
+    // TODO: add function
     // templateParameters: fs.readdirSync(paths.data)
     //     .reduce((o, key) => ({
     //         ...o,
