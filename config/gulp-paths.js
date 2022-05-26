@@ -9,7 +9,7 @@ export default {
         images: `${src}/img/**/*.{jpg,jpeg,png,gif,webp}`,
         svg: `${src}/img/**/*.svg`,
         fonts: `${src}/fonts/`,
-        svgIcons: `${src}/svg-icons/*.svg`,
+        svgIcons: `${src}/svg/**/*.svg`,
     },
 
     build: {

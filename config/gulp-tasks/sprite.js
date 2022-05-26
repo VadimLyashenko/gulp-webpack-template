@@ -8,13 +8,13 @@ export const sprite = () => app.gulp.src(`${app.path.src.svgIcons}`, {})
     .pipe(svgSprite({
         mode: {
             symbol: {
-                sprite: '../img/icons/icons.svg',
+                sprite: '../img/sprite/sprite.svg',
             },
         },
         shape: {
             id: {
-                separator: '',
-                generator: 'svg-',
+                // separator: '',
+                // generator: 'svg-',
             },
             transform: [
                 {
