@@ -11,40 +11,15 @@
     }
 }
 
-// Percent
-@function percent($px, $from) {
-    $result: math.div($px, $from) * 100%;
-
-    @return $result;
-}
-
 // REM
 @function rem($px) {
-    $result: math.div($px, 16) + rem;
-
-    @return $result;
+    @return math.div($px, 16) + rem;
 }
 
 // EM
 @function em($px, $current: 16) {
-    $result: math.div($px, $current) + em;
-
-    @return $result;
+    @return math.div($px, $current) + em;
 }
-
-// Currency
-@mixin currency($sym) {
-    &::after {
-        content: '#{$sym}';
-    }
-}
-
-// Grids
-//@mixin gridCards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
-//    display: grid;
-//    gap: $gap;
-//    grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
-//}
 
 // Adaptive value (clamp)
 @mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minWidth, $keepSize: 0) {

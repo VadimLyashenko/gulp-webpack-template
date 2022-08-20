@@ -49,12 +49,13 @@ $responsiveType: 1;
 @import 'base/null';
 
 body {
-    // Скролл заблокирован
+
+    // Scroll locked
     .lock & {
         overflow: hidden;
         touch-action: none;
     }
-    // Сайт загружен
+    // Site downloaded
     // .loaded & {
     // }
 }
