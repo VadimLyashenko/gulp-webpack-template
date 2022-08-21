@@ -17,7 +17,6 @@ $fontSize: rem(14); // default font size
 // Colors
 $mainColor: #000; // default font color
 
-// Settings ===============================================================================================================================================================================================================================================================================================
 // Min page width
 $minWidth: 320;
 
@@ -39,11 +38,6 @@ $pc: em($containerWidth);
 $tablet: em(991.98);
 $mobile: em(767.98);
 $mobileSmall: em(479.98);
-
-// Adaptive type:
-// 1 = responsive,
-// 2 = breakpoints
-$responsiveType: 1;
 
 // Break browser styles
 @import 'base/null';
@@ -76,58 +70,16 @@ body {
         min-width: 0;
     }
 }
-// Container ======================================================================================================================================================================================================================
 
-/*
-*__container
-Snippet (HTML): cnt
-*/
-@if ($responsiveType==1) {
-    // responsive
-    [class*='__container'] {
-        @if ($maxWidthContainer>0) {
-            max-width: rem($maxWidthContainer);
-            box-sizing: content-box;
-            margin: 0 auto;
-        }
-
-        @if ($containerPadding>0) {
-            padding: 0 rem(math.div($containerPadding, 2));
-        }
-    }
-}
-
-@else {
-    // breakpoints
-    [class*='__container'] {
+[class*='__container'] {
+    @if ($maxWidthContainer > 0) {
+        max-width: rem($maxWidthContainer);
+        box-sizing: content-box;
         margin: 0 auto;
+    }
 
-        @if ($maxWidthContainer>0) {
-            max-width: rem($maxWidthContainer);
-            box-sizing: content-box;
-        }
-
-        @else {
-            @if ($containerPadding>0) {
-                padding: 0 rem(math.div($containerPadding, 2));
-            }
-        }
-
-        @media (max-width: $pc) {
-            max-width: rem(970);
-        }
-
-        @media (max-width: $tablet) {
-            max-width: rem(750);
-        }
-
-        @media (max-width: $mobile) {
-            max-width: none;
-
-            @if ($containerPadding>0 and $maxWidthContainer>0) {
-                padding: 0 rem(math.div($containerPadding, 2));
-            }
-        }
+    @if ($containerPadding > 0) {
+        padding: 0 rem(math.div($containerPadding, 2));
     }
 }
 
