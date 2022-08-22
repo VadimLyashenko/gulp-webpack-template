@@ -48,7 +48,7 @@
         &._select-pseudo-label {
             &::before {
                 content: attr(data-pseudo-label);
-                opacity: 0.5;
+                opacity: .5;
             }
         }
     }

@@ -5,7 +5,7 @@
     display: flex;
     width: 88px;
     height: 40px;
-    border: 1px solid rgba(166, 166, 166, 0.45);
+    border: 1px solid rgba(166, 166, 166, .45);
 
     // .quantity__button
     &__button {
@@ -30,7 +30,7 @@
             &:hover {
                 &::before,
                 &::after {
-                    background-color: rgba(0, 0, 0, 0.5);
+                    background-color: rgba(0, 0, 0, .5);
                 }
             }
         }

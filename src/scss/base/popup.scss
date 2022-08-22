@@ -7,9 +7,9 @@ body::after {
     height: 100%;
     pointer-events: none;
     content: '';
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, .5);
     opacity: 0;
-    transition: opacity 0.8s ease 0s;
+    transition: opacity .8s ease 0s;
 }
 
 .popup-show body::after {
@@ -25,7 +25,7 @@ body::after {
     padding: 30px 10px;
     pointer-events: none;
     visibility: hidden;
-    transition: visibility 0.8s ease 0s;
+    transition: visibility .8s ease 0s;
 }
 
 .popup_show {
@@ -57,7 +57,7 @@ body::after {
     visibility: hidden;
     background-color: #eee;
     border-radius: 20px;
-    transition: transform 0.3s ease 0s;
+    transition: transform .3s ease 0s;
     transform: scale(0);
 
     .lock & {
