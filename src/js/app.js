@@ -90,14 +90,6 @@ flsFunctions.isWebp();
 */
 // import "./files/forms/inputmask.js";
 
-/* Модуль работы с ползунком */
-/*
-Подключение и настройка выполняется в файле js/files/forms/range.js
-Документация плагина: https://refreshless.com/nouislider/
-Сниппет (HTML): range
-*/
-// import "./files/forms/range.js";
-
 /* Модуль работы с подсказками (tippy) */
 /*
 Подключение плагина Tippy.js и настройка выполняется в файле js/files/tippy.js
