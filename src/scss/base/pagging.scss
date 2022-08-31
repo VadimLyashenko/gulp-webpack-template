@@ -2,18 +2,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // .pagging__arrow
-    // &__arrow {
-    // }
-    // .pagging__list
+
+    //.pagging__arrow &__arrow {
+    //}
+    //.pagging__list
     &__list {
         display: flex;
-        // li {
-        // }
+
+        //li {
+        //}
     }
-    // .pagging__item
-    // &__item {
-    //   &._active {
-    //   }
-    // }
+
+    //.pagging__item &__item {
+    //    &._active {
+    //    }
+    //}
 }

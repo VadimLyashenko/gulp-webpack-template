@@ -20,8 +20,6 @@
 //@import 'base/sticky';
 
 // Styles for responsive images
-// Сниппет (HTML): ibg (div c картинкой и классами)
-// Сниппет (HTML): ibga (a c картинкой и классами)
 [class*='-ibg'] {
     position: relative;
 
@@ -42,8 +40,7 @@
 }
 
 // Templates
-// @extend %template name;
-// Сниппет (SCSS): ex
+// @extend %template_name;
 
 // Counter for list
 %listCounter {
