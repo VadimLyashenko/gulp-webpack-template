@@ -8,9 +8,6 @@ import { formValidate } from "../files/forms/forms.js";
 // Файл базовых стилей src/scss/forms/select.scss
 
 /*
-Снипет (HTML): sel
-*/
-/*
 // Настройки
 Для селекта (select):
 class="имя класса" - модификатор к конкретному селекту
@@ -396,12 +393,12 @@ class SelectConstructor {
     if (originalSelect.multiple) { // Если мультивыбор
       // Выделяем классом элемент
       optionItem.classList.toggle(this.selectClasses.classSelectOptionSelected);
-      // Очищаем выбранные элементы 
+      // Очищаем выбранные элементы
       const originalSelectSelectedItems = this.getSelectedOptionsData(originalSelect).elements;
       originalSelectSelectedItems.forEach(originalSelectSelectedItem => {
         originalSelectSelectedItem.removeAttribute('selected');
       });
-      // Выбираем элементы 
+      // Выбираем элементы
       const selectSelectedItems = selectItem.querySelectorAll(this.getSelectClass(this.selectClasses.classSelectOptionSelected));
       selectSelectedItems.forEach(selectSelectedItems => {
         originalSelect.querySelector(`option[value="${selectSelectedItems.dataset.value}"]`).setAttribute('selected', 'selected');

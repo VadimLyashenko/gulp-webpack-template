@@ -1,6 +1,5 @@
 /*
 Документация слайдера: https://swiperjs.com/
-Сниппет(HTML): swiper
 */
 
 // Подключаем слайдер Swiper из node_modules
@@ -9,7 +8,7 @@
 import Swiper, { Navigation } from 'swiper';
 /*
 Основниые модули слайдера:
-Navigation, Pagination, Autoplay, 
+Navigation, Pagination, Autoplay,
 EffectFade, Lazy, Manipulation
 Подробнее смотри https://swiperjs.com/
 */

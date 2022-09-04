@@ -1,5 +1,4 @@
 // Модуль попапов
-// Сниппет (HTML): pl
 
 // Подключение функционала шаблона
 import { isMobile, bodyLockStatus, bodyLock, bodyUnlock, bodyLockToggle, FLS } from "../files/functions.js";
@@ -11,7 +10,7 @@ class Popup {
     let config = {
       logging: true,
       init: true,
-      // Для кнопок 
+      // Для кнопок
       attributeOpenButton: 'data-popup', // Атрибут для кнопки, которая вызывает попап
       attributeCloseButton: 'data-close', // Атрибут для кнопки, которая закрывает попап
       // Для сторонних объектов
@@ -204,7 +203,7 @@ class Popup {
           this.targetOpen.element.querySelector(`[${this.options.youtubePlaceAttribute}]`).appendChild(iframe);
         }
         if (this.options.hashSettings.location) {
-          // Получение хэша и его выставление 
+          // Получение хэша и его выставление
           this._getHash();
           this._setHash();
         }
@@ -304,7 +303,7 @@ class Popup {
 
     this.popupLogging(`Закрыл попап`);
   }
-  // Получение хэша 
+  // Получение хэша
   _getHash() {
     if (this.options.hashSettings.location) {
       this.hash = this.targetOpen.selector.includes('#') ?

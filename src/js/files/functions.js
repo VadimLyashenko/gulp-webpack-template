@@ -1,23 +1,6 @@
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
-/* Проверка поддержки webp, добавление класса webp или no-webp для HTML */
-export function isWebp() {
-  // Проверка поддержки webp
-  function testWebP(callback) {
-    let webP = new Image();
-    webP.onload = webP.onerror = function () {
-      callback(webP.height == 2);
-    };
-    webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-  }
-  // Добавление класса _webp или _no-webp для HTML
-  testWebP(function (support) {
-    let className = support === true ? 'webp' : 'no-webp';
-    document.documentElement.classList.add(className);
-  });
-}
-
 /* Проверка мобильного браузера */
 export let isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
 /* Добавление класса touch для HTML если браузер мобильный */
@@ -83,7 +66,7 @@ export let _slideUp = (target, duration = 500, showmore = 0) => {
       target.style.removeProperty('transition-duration');
       target.style.removeProperty('transition-property');
       target.classList.remove('_slide');
-      // Создаем событие 
+      // Создаем событие
       document.dispatchEvent(new CustomEvent("slideUpDone", {
         detail: {
           target: target
@@ -118,7 +101,7 @@ export let _slideDown = (target, duration = 500, showmore = 0) => {
       target.style.removeProperty('transition-duration');
       target.style.removeProperty('transition-property');
       target.classList.remove('_slide');
-      // Создаем событие 
+      // Создаем событие
       document.dispatchEvent(new CustomEvent("slideDownDone", {
         detail: {
           target: target
@@ -181,7 +164,6 @@ export let bodyLock = (delay = 500) => {
 }
 
 // Модуль работы со спойлерами =======================================================================================================================================================================================================================
-//Сниппет (HTML): spollers
 export function spollers() {
   const spollersArray = document.querySelectorAll('[data-spollers]');
   if (spollersArray.length > 0) {
@@ -281,7 +263,6 @@ export function spollers() {
 }
 
 // Модуь работы с табами =======================================================================================================================================================================================================================
-//Сниппет (HTML): tabs
 export function tabs() {
   const tabs = document.querySelectorAll('[data-tabs]');
   let tabsActiveHash = [];
@@ -409,7 +390,6 @@ export function tabs() {
 }
 
 // Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
-// Сниппет (HTML): menu
 export function menuInit() {
   if (document.querySelector(".icon-menu")) {
     document.addEventListener("click", function (e) {
@@ -430,7 +410,6 @@ export function menuClose() {
 }
 
 // Модуль "показать еще" =======================================================================================================================================================================================================================
-//Сниппет (HTML): showmore
 export function showMore() {
   window.addEventListener("load", function (e) {
     const showMoreBlocks = document.querySelectorAll('[data-showmore]');
@@ -580,7 +559,7 @@ export function indexInParent(parent, element) {
   const array = Array.prototype.slice.call(parent.children);
   return Array.prototype.indexOf.call(array, element);
 };
-// Обработа медиа запросов из атрибутов 
+// Обработа медиа запросов из атрибутов
 export function dataMediaQueries(array, dataSetValue) {
   // Получение объектов с медиа запросами
   const media = Array.from(array).filter(function (item, index, self) {
