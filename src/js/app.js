@@ -3,14 +3,15 @@ window['FLS'] = true;
 
 import '../scss/style.scss';
 
-// import * as flsFunctions from './files/functions.js';
-import {isWebp} from './utils/isWebp.js';
+import * as flsFunctions from './files/functions.js';
+import {isWebp, addTouchClass} from './utils/common.js';
 
 // .webp or .no-webp for <html>
 isWebp();
 
-/* Добавление класса touch для HTML если браузер мобильный */
-// flsFunctions.addTouchClass();
+// .touch for <html> on mobile browser
+addTouchClass();
+
 /* Добавление loaded для HTML после полной загрузки страницы */
 // flsFunctions.addLoadedClass();
 /* Модуль для работы с меню (Бургер) */
