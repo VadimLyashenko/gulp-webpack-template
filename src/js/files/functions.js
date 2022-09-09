@@ -1,15 +1,6 @@
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
-// Добавление loaded для HTML после полной загрузки страницы
-export function addLoadedClass() {
-  window.addEventListener("load", function () {
-    setTimeout(function () {
-      document.documentElement.classList.add('loaded');
-    }, 0);
-  });
-}
-
 // Получение хеша в адресе сайта
 export function getHash() {
   if (location.hash) { return location.hash.replace('#', ''); }

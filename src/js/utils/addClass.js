@@ -1,4 +1,4 @@
-export function isWebp() {
+export function addWebp() {
     function testWebP(callback) {
         const webP = new Image();
 
@@ -36,8 +36,16 @@ export const isMobile = {
     },
 };
 
-export function addTouchClass() {
+export function addTouch() {
     if (isMobile.any()) {
         document.documentElement.classList.add('touch');
     }
+}
+
+export function addLoaded() {
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            document.documentElement.classList.add('loaded');
+        }, 0);
+    });
 }

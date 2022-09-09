@@ -4,16 +4,16 @@ window['FLS'] = true;
 import '../scss/style.scss';
 
 import * as flsFunctions from './files/functions.js';
-import {isWebp, addTouchClass} from './utils/common.js';
+import * as addClass from './utils/addClass.js';
 
-// .webp or .no-webp for <html>
-isWebp();
+addClass.addWebp();
 
 // .touch for <html> on mobile browser
-addTouchClass();
+// addClass.addTouch();
 
 /* Добавление loaded для HTML после полной загрузки страницы */
-// flsFunctions.addLoadedClass();
+// addClass.addLoaded();
+
 /* Модуль для работы с меню (Бургер) */
 // flsFunctions.menuInit();
 /* Учет плавающей панели на мобильных устройствах при 100vh */
