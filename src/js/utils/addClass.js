@@ -1,3 +1,6 @@
+/**
+ * Add class .webp or .no-webp for <html>.
+ */
 export function addWebp() {
     function testWebP(callback) {
         const webP = new Image();
@@ -15,6 +18,9 @@ export function addWebp() {
     });
 }
 
+/**
+ * Determines whether the browser is mobile.
+ */
 export const isMobile = {
     Android: function() {
         return navigator.userAgent.match(/Android/i);
@@ -36,12 +42,18 @@ export const isMobile = {
     },
 };
 
+/**
+ * Add class .touch for <html> if the browser is mobile.
+ */
 export function addTouch() {
     if (isMobile.any()) {
         document.documentElement.classList.add('touch');
     }
 }
 
+/**
+ * Adding class .loaded for HTML after the page has fully loaded.
+ */
 export function addLoaded() {
     window.addEventListener('load', function() {
         setTimeout(function() {
