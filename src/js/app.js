@@ -3,19 +3,16 @@ window['FLS'] = true;
 
 import '../scss/style.scss';
 
-import * as flsFunctions from './files/functions.js';
 import * as addClass from './utils/addClass.js';
+// import * as menu from './utils/menu.js';
+// import * as flsFunctions from './files/functions.js';
 
 addClass.addWebp();
-
-// .touch for <html> on mobile browser
 // addClass.addTouch();
-
-/* Добавление loaded для HTML после полной загрузки страницы */
 // addClass.addLoaded();
 
-/* Модуль для работы с меню (Бургер) */
-// flsFunctions.menuInit();
+// menu.menuInit();
+
 /* Учет плавающей панели на мобильных устройствах при 100vh */
 // flsFunctions.fullVHfix();
 
