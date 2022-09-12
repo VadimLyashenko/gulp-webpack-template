@@ -58,7 +58,6 @@
         "style-loader": "latest",
         "swiper": "latest",
         "terser-webpack-plugin": "latest",
-        "tippy.js": "latest",
         "vanilla-lazyload": "latest",
         "webp-converter": "2.2.3",
         "webpack": "latest",
