@@ -5,15 +5,14 @@ import '../scss/style.scss';
 
 import * as addClass from './utils/addClass.js';
 // import * as menu from './utils/menu.js';
-// import * as flsFunctions from './files/functions.js';
+// import * as fullVHfix from './utils/fullVHfix.js';
+import * as flsFunctions from './files/functions.js';
 
 addClass.addWebp();
 // addClass.addTouch();
 // addClass.addLoaded();
+// fullVHfix.fullVHfix();
 // menu.menuInit();
-
-/* Учет плавающей панели на мобильных устройствах при 100vh */
-// flsFunctions.fullVHfix();
 
 /*
 Модуль работы со спойлерами

@@ -11,19 +11,6 @@ export function setHash(hash) {
   history.pushState('', '', hash);
 }
 
-// Учет плавающей панели на мобильных устройствах при 100vh
-export function fullVHfix() {
-  const fullScreens = document.querySelectorAll('[data-fullscreen]');
-  if (fullScreens.length && isMobile.any()) {
-    window.addEventListener('resize', fixHeight);
-    function fixHeight() {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }
-    fixHeight();
-  }
-}
-
 // Вспомогательные модули плавного расскрытия и закрытия объекта ======================================================================================================================================================================
 export let _slideUp = (target, duration = 500, showmore = 0) => {
   if (!target.classList.contains('_slide')) {
