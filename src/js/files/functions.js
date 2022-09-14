@@ -1,16 +1,6 @@
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
-// Получение хеша в адресе сайта
-export function getHash() {
-  if (location.hash) { return location.hash.replace('#', ''); }
-}
-// Указание хеша в адресе сайта
-export function setHash(hash) {
-  hash = hash ? `#${hash}` : window.location.href.split('#')[0];
-  history.pushState('', '', hash);
-}
-
 // Вспомогательные модули плавного расскрытия и закрытия объекта ======================================================================================================================================================================
 export let _slideUp = (target, duration = 500, showmore = 0) => {
   if (!target.classList.contains('_slide')) {

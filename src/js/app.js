@@ -1,4 +1,6 @@
 // Включить/выключить FLS (Full Logging System) (в работе)
+import {setHash} from './utils/hash.js';
+
 window['FLS'] = true;
 
 import '../scss/style.scss';
