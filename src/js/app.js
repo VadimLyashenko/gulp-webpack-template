@@ -1,13 +1,12 @@
 // Включить/выключить FLS (Full Logging System) (в работе)
-import {setHash} from './utils/hash.js';
-
 window['FLS'] = true;
 
 import '../scss/style.scss';
 
 import * as addClass from './utils/addClass.js';
-// import * as menu from './utils/menu.js';
 // import * as fullVHfix from './utils/fullVHfix.js';
+// import * as menu from './utils/menu.js';
+// import * as spoiler from './utils/spoiler.js';
 import * as flsFunctions from './files/functions.js';
 
 addClass.addWebp();
@@ -15,11 +14,7 @@ addClass.addWebp();
 // addClass.addLoaded();
 // fullVHfix.fullVHfix();
 // menu.menuInit();
-
-/*
-Модуль работы со спойлерами
-*/
-// flsFunctions.spollers();
+// spoiler.spoilers();
 
 /*
 Модуль работы с табами
