@@ -1,9 +1,10 @@
-import {_slideToggle, _slideUp, dataMediaQueries} from '../files/functions.js';
+import {_slideToggle, _slideUp} from './slide.js';
+import {dataMediaQueries} from '../files/functions.js';
 
 /**
  * Spoilers handling.
  */
-export function spoilers() {
+export function spoilersInit() {
     const spoilers = document.querySelectorAll('[data-spoilers]');
 
     if (spoilers.length === 0) {

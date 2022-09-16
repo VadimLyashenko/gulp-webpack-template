@@ -14,7 +14,7 @@ addClass.addWebp();
 // addClass.addLoaded();
 // fullVHfix.fullVHfix();
 // menu.menuInit();
-// spoiler.spoilers();
+// spoiler.spoilersInit();
 
 /*
 Модуль работы с табами
