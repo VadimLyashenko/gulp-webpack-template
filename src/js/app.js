@@ -7,6 +7,7 @@ import * as addClass from './utils/addClass.js';
 // import * as fullVHfix from './utils/fullVHfix.js';
 // import * as menu from './utils/menu.js';
 // import * as spoiler from './utils/spoiler.js';
+// import * as tab from './utils/tab.js';
 import * as flsFunctions from './files/functions.js';
 
 addClass.addWebp();
@@ -15,11 +16,7 @@ addClass.addWebp();
 // fullVHfix.fullVHfix();
 // menu.menuInit();
 // spoiler.spoilersInit();
-
-/*
-Модуль работы с табами
-*/
-// flsFunctions.tabs();
+// tab.tabsInit();
 
 /*
 Модуль "показать еще"
