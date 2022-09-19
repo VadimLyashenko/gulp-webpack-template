@@ -1,7 +1,7 @@
 /**
  * Smooth hiding an element.
  * @param {Element} target
- * @param {number} duration
+ * @param {number, string} duration
  * @param {number} showmore
  */
 export const _slideUp = (target, duration = 500, showmore = 0) => {
@@ -49,7 +49,7 @@ export const _slideUp = (target, duration = 500, showmore = 0) => {
 /**
  * Smooth opening an element.
  * @param {Element} target
- * @param {number} duration
+ * @param {number, string} duration
  * @param {number} showmore
  */
 export const _slideDown = (target, duration = 500, showmore = 0) => {
