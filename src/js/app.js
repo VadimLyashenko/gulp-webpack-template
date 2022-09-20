@@ -8,6 +8,7 @@ import * as addClass from './utils/addClass.js';
 // import * as menu from './utils/menu.js';
 // import * as spoiler from './utils/spoiler.js';
 // import * as tab from './utils/tab.js';
+// import * as showMore from './utils/showmore.js';
 import * as flsFunctions from './files/functions.js';
 
 addClass.addWebp();
@@ -17,11 +18,7 @@ addClass.addWebp();
 // menu.menuInit();
 // spoiler.spoilersInit();
 // tab.tabsInit();
-
-/*
-Модуль "показать еще"
-*/
-// flsFunctions.showMore();
+// showMore.showMore();
 
 /*
 Попапы
