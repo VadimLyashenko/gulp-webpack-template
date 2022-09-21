@@ -10,12 +10,6 @@ export function FLS(message) {
   }, 0);
 }
 
-// Убрать класс из всех элементов массива
-export function removeClasses(array, className) {
-  for (var i = 0; i < array.length; i++) {
-    array[i].classList.remove(className);
-  }
-}
 // Уникализация массива
 export function uniqArray(array) {
   return array.filter(function (item, index, self) {
