@@ -8,3 +8,12 @@ export function removeClasses(array, className) {
         array[i].classList.remove(className);
     }
 }
+
+/**
+ * Array only unique elements
+ * @param {array} array
+ * @returns {array}
+ */
+export function uniqArray(array) {
+    return array.filter((item, index, self) => self.indexOf(item) === index);
+}
